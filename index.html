@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,6 +107,8 @@ body, html {
     margin: 0 auto;
   padding-top: 3px;
     padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     width: 50%;
     border-radius: 10px;
     color: white;
@@ -155,7 +158,10 @@ body, html {
     width: 80%;
   }
 }
-
+.robux {
+  text-decoration: underline;
+  color: rgb(65, 65, 65);
+}
 
 #ngift {
     text-decoration: underline;
@@ -249,6 +255,7 @@ body, html {
         <div class="contents">
             <h4>
             Bruhware is now accepting <span id="ngift">Nitro Gifts</span> as payments!!!
+            <h4>Payments with <span class="robux">Robux Giftcards</span> are also now recieving a discount.</h4>
         </h4>
         <a class="w3-button w3-white w3-padding-large" href="https://linkvertise.com/466483/bruhware-aimbot-esp/1">Buy here</a>
         </div>
@@ -259,10 +266,11 @@ body, html {
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
         <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>Decent</b> Priority</li>
-        <li class="w3-padding-16"><b>1-2</b> Day Response Time</li>
-        <li class="w3-padding-16"><b>Decent</b> Updates</li>
+        <li class="w3-padding-16"><b>Good</b> Priority</li>
+        <li class="w3-padding-16"><b>1</b> Day Response Time</li>
+        <li class="w3-padding-16"><b>Good</b> Updates</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
+              <li class="w3-padding-16"><b>Discount with</b> Robux Giftcards</li>
         <li class="w3-padding-16">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/1200px-Robux_2019_Logo_Black.svg.png"  width="25" height="27">     <h2 class="w3-wide">1500</h2> 
      
@@ -281,6 +289,7 @@ body, html {
         <li class="w3-padding-16"><b>1/2</b> Day Response Time</li>
         <li class="w3-padding-16"><b>Faster</b> Updates</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
+           <li class="w3-padding-16"><b>Discount with</b> Robux Giftcards</li>
         <li class="w3-padding-16">
            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/1200px-Robux_2019_Logo_Black.svg.png"  width="25" height="27">     <h2 class="w3-wide">1750</h2> 
           <span class="w3-opacity">lifetime</span>
@@ -297,6 +306,7 @@ body, html {
         <li class="w3-padding-16"><b>1</b> Hour Response Time</li>
         <li class="w3-padding-16"><b>Fastest</b> Updates</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
+           <li class="w3-padding-16"><b>Discount with</b> Robux Giftcards</li>
         <li class="w3-padding-16">
            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Robux_2019_Logo_Black.svg/1200px-Robux_2019_Logo_Black.svg.png"  width="25" height="27">     <h2 class="w3-wide">2000</h2> 
           <span class="w3-opacity">lifetime</span>
@@ -342,13 +352,6 @@ body, html {
 </footer>
  
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
 
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
