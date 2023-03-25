@@ -196,7 +196,6 @@ body {
       /*features */
       .features-container {
         background: linear-gradient(315deg, #571b21 0%, #5c1621 74%);
-        width: 110%;
       }
       .features-title {
         color: white;
