@@ -63,26 +63,14 @@ var TxtType = function(el, toRotate, period) {
     document.body.appendChild(css);
   };
   window.addEventListener('load', () => {
-    // Check if screen width is below a certain threshold
-    const isMobile = window.innerWidth < 790;
-  
-    if (isMobile) {
-      // Disable AOS animation by removing data-aos attribute
-      const aosElements = document.querySelectorAll('[data-aos]');
-      aosElements.forEach(element => {
-        element.removeAttribute('data-aos');
-      });
-    } else {
-      // Initialize AOS animation
-      AOS.init({
-        duration: 900,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false,
-      });
-    }
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
   });
-  
+
   var prevScrollpos = window.pageYOffset;
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
