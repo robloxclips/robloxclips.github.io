@@ -1,1 +1,111 @@
-document.querySelectorAll(".navbar-burger")[0].onclick=()=>{document.getElementsByClassName("navbar")[0].classList.toggle("open"),document.getElementById("menu").classList.toggle("bx-x"),document.getElementById("menu").classList.toggle("bx-menu")};var TxtType=function(t,e,i){this.toRotate=e,this.el=t,this.loopNum=0,this.period=parseInt(i,10)||2e3,this.txt="",this.tick(),this.isDeleting=!1};TxtType.prototype.tick=function(){var t=this.loopNum%this.toRotate.length,e=this.toRotate[t];this.isDeleting?this.txt=e.substring(0,this.txt.length-1):this.txt=e.substring(0,this.txt.length+1),this.el.innerHTML='<span class="wrap">'+this.txt+"</span>";var i=this,s=100;this.isDeleting&&(s/=2),this.isDeleting||this.txt!==e?this.isDeleting&&""===this.txt&&(this.isDeleting=!1,this.loopNum++,s=500):(s=this.period,this.isDeleting=!0),setTimeout(function(){i.tick()},s)},window.onload=function(){for(var t=document.getElementsByClassName("typewrite"),e=0;e<t.length;e++){var i=t[e].getAttribute("data-type"),s=t[e].getAttribute("data-period");i&&new TxtType(t[e],JSON.parse(i),s)}var a=document.createElement("style");a.type="text/css",a.innerHTML=".typewrite > .wrap { border-right: 0.08em solid #fff}",document.body.appendChild(a)},window.addEventListener("load",()=>{AOS.init({duration:900,easing:"ease-in-out",once:!0,mirror:!1})});var prevScrollpos=window.pageYOffset;window.addEventListener("scroll",function(){var t=document.querySelector(".navbar"),e=window.pageYOffset;0==e?t.classList.remove("navbar-scrolled"):t.classList.add("navbar-scrolled"),prevScrollpos=e});const accordionItemHeaders=document.querySelectorAll(".accordion-item-header");accordionItemHeaders.forEach(t=>{t.addEventListener("click",e=>{t.classList.toggle("active");let i=t.nextElementSibling;t.classList.contains("active")?i.style.maxHeight=i.scrollHeight+"px":i.style.maxHeight=0})});
+document.querySelectorAll(".navbar-burger")[0].onclick = () => {
+    document.getElementsByClassName("navbar")[0].classList.toggle("open");
+    document.getElementById("menu").classList.toggle("bx-x")
+    document.getElementById("menu").classList.toggle("bx-menu")
+}
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+  
+    if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+  
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+  
+    var that = this;
+    var delta = 100;
+    // code for randomized delays
+  
+    //   var delta = 200 - Math.random() * 100; 
+  
+    if (this.isDeleting) { delta /= 2; }
+  
+    if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+    }
+  
+    setTimeout(function() {
+    that.tick();
+    }, delta);
+  };
+  
+  window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
+  window.addEventListener('load', () => {
+    // Check if screen width is below a certain threshold
+    const isMobile = window.innerWidth < 790;
+  
+    if (isMobile) {
+      // Disable AOS animation by removing data-aos attribute
+      const aosElements = document.querySelectorAll('[data-aos]');
+      aosElements.forEach(element => {
+        element.removeAttribute('data-aos');
+      });
+    } else {
+      // Initialize AOS animation
+      AOS.init({
+        duration: 900,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+      });
+    }
+  });
+  
+  var prevScrollpos = window.pageYOffset;
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".navbar");
+  var currentScrollPos = window.pageYOffset;
+  if (currentScrollPos == 0) {
+    navbar.classList.remove("navbar-scrolled");
+  } else {
+    navbar.classList.add("navbar-scrolled");
+  }
+  prevScrollpos = currentScrollPos;
+});
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+    accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
