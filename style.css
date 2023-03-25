@@ -226,7 +226,7 @@ body {
         flex-direction: column;
         justify-content: center; /* To center the content vertically */
         align-items: center; /* To center the content horizontally */
-        background-color: #c2c1c1; /* Change the background color to a grayish shade */
+        background-color: #c4bbbb; /* Change the background color to a grayish shade */
         border-radius: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
         margin-bottom: 20px; /* Add some margin for spacing */
@@ -252,13 +252,13 @@ body {
       .features .card .title {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #05113e;
+        color: #6d0808;
         margin-bottom: 20px;
       }
       
       .features .card .description {
         font-size: 1rem;
-        color: #4d4c4c;
+        color: #2c2c2c;
         line-height: 1.5;
       }
       
@@ -298,7 +298,7 @@ body {
 }
 
 .pricing-card {
-  background-color: #fff;
+  background-color: #ece6e6;
   border-radius: 0.4rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 1rem;
@@ -326,7 +326,7 @@ body {
 
 .pricing-card .pricing {
   background-color: #ca2923;
-  color: #fff;
+  color: #ffffff;
   font-size: 2rem;
   font-weight: bold;
   padding: 1rem;
