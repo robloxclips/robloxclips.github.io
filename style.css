@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background-color: #0a0e13;
+    --blue-color: #429bfb;
+}
+body {
+    background-color: var(--background-color);
+}
+.navbar a {
+    color: rgb(190, 190, 190);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.navbar a:hover {
+    color: white;
+}
+.navbar-burger{
+    position: absolute;
+    top: 0;
+    right: 0;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    margin-top: 1.2rem;
+    display: none;
+    font-size: 2rem;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    flex-direction: row;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+.navbar.navbar-scrolled {
+    background-color: black;
+      box-shadow: 0px 5px 10px rgba(36, 35, 35, 0.1);
+    }
+    .navbar.navbar-scrolled:not(.open) {
+      opacity: 0.7;
+  }
+  
+    
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Add this line */
+  }
+.logo h4 {
+    padding: 1rem;
+}
+.bruhware {
+  background: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.link {
+    margin-right: 2rem;
+    margin-left: 2rem; /* Add this line to add space between the links and the right side of the screen */
+}
+
+@media only screen and (max-width: 900px){
+    .navbar-burger{
+    display: block;
+    }
+    .link {
+    display: none;
+    }
+    .navbar-body{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #000;
+    visibility: hidden;
+    transition: all 0.3s;
+    background: transparent;
+    }
+    .navbar.open .navbar-body{
+    translate: 0 0;
+    visibility: visible;
+    background-color: black;
+    opacity: 0.9;
+    }
+    .navbar.open .link {
+    display: block;
+    }
+    .navbar-links {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    }
+    }
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100vh;
+        color: white;
+      }
+    
+.hero-image {
+    position: relative;
+}
+.image-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.image-2 {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+  }
+  
+    .hero h1 {
+        font-size: 5rem;
+        padding-bottom: 5rem;
+    }
+    .hero p {
+        font-size: 1.5rem;
+    }
+    .hero-content {
+        flex: 1;
+        margin: 5rem;
+      }
+      
+      .hero-image {
+        flex: 1;
+      }
+      @media only screen and (max-width: 900px) {
+.hero h1, .hero h1 span {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+.hero p {
+    font-size: 1rem;
+}
+.hero img {
+    width: 22rem;
+}
+.hero-image {
+  margin-left: 1vh;
+}
+      }
+
+      @media (min-width: 767px) and (max-width: 1300px) {
+        .image-1, .image-2 {
+         width: 22rem;
+      }
+      .hero-image {
+        margin-left: 20vh;
+      }
+      }
+      /*features */
+      .features-container {
+        background: linear-gradient(315deg, #571b21 0%, #5c1621 74%);
+      }
+      .features-title {
+        color: white;
+        text-align: center;
+        padding-top: 2rem;
+      font-size: 3rem;
+      }
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* To center the cards horizontally */
+        padding: 50px 0; /* Add some padding for spacing */
+        padding-right: clamp(min(10vw, 5rem), 300px, max(90vw, 55rem));
+        padding-left: clamp(min(10vw, 5rem), 300px, max(90vw, 55rem));
+        position: relative; /* Add relative positioning to the parent element */
+      }
+      
+
+      @media only screen and (max-width: 1000px) {
+        .features {
+          padding-right: 5rem;
+          padding-left: 5rem;
+        }
+      }
+      
+      .features .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* To center the content vertically */
+        align-items: center; /* To center the content horizontally */
+        background-color: #c2c1c1; /* Change the background color to a grayish shade */
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+        margin-bottom: 20px; /* Add some margin for spacing */
+        margin-top: 20px;
+        width: 350px; /* Set a fixed width for the cards */
+        height: 350px; /* Set a fixed height for the cards */
+        padding: 30px;
+        text-align: center;
+        margin-top: 5.5vh;
+        transition: transform 0.3s ease-in-out; /* Add a transition effect */
+      }
+      
+      .features .card:hover {
+        transform: translateY(-10px); /* Add a hover effect */
+      }
+      
+      .features .card i {
+        font-size: 3rem;
+       color: rgb(114, 36, 36);
+        margin-bottom: 20px;
+      }
+      
+      .features .card .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #05113e;
+        margin-bottom: 20px;
+      }
+      
+      .features .card .description {
+        font-size: 1rem;
+        color: #4d4c4c;
+        line-height: 1.5;
+      }
+      
+     /* Pricing Section */
+     .info-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      background-color: #9b1b11;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+    .nitro {
+      background: -webkit-linear-gradient(rgb(52, 1, 194), rgb(100, 67, 109));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .info-container h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      margin: 0;
+      line-height: 1.2;
+    }
+    
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+   margin: 2rem 0;
+}
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pricing-card .title {
+  background-color: #8b1612;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.pricing-card .content {
+  padding: 2rem;
+}
+
+.pricing-card .content div {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.pricing-card .pricing {
+  background-color: #ca2923;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.pricing-card .pricing sub {
+  font-size: 0.8rem;
+}
+
+.pricing-card .purchase {
+  background-color: #8b1612;
+  padding: 1rem;
+}
+.pricing-content {
+  color: black;
+}
+
+.pricing-card .btn {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.pricing-container .pricing-title {
+  color: white;
+  text-align: center;
+padding-bottom: 1rem;
+padding-top: 3rem;
+font-size: 3rem;
+
+}
+
+.pricing-card .btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-card {
+    max-width: 100%;
+  }
+}
+/* footer  idk worst css every written */
+footer {
+  background-color: #681e1e;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-center p {
+font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+footer a {
+  color: white;
+}
+/* centeered hero ig */
+.hero-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 30vh;
+}
+
+.herocenter-content {
+  text-align: center;
+}
+
+.hero-title {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.hero-description {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.colorful {
+  color: rgb(121, 15, 15);
+}
+.btn-red {
+  padding: 1rem;
+  background: rgb(121, 15, 15);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
