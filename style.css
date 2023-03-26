@@ -12,6 +12,10 @@ body, .hero{
     --background-color: #0a0e13;
     --blue-color: #429bfb;
 }
+.hero {
+  background: linear-gradient(160deg, #361313, #0a0e13, #0a0e13, #0a0e13);
+}
+
 body {
     background-color: var(--background-color);
 }
@@ -427,4 +431,50 @@ footer a {
   color: white;
   text-decoration: none;
   border-radius: 0.5rem;
+}
+.marquee {
+  animation: m-anim 7s ease-in infinite;
+  font-size: 9rem;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  color: white;
+}
+@media screen and (max-width: 1200px) { 
+  .marquee {
+    font-size: 5rem;
+  }
+}
+@keyframes m-anim {
+  0% {transform: translateX(100%); opacity: 0;}
+  10% {opacity: 0.3;}
+  90% {opacity: 0.3;}
+  100% {transform: translateX(-350%); opacity: 0;}
+}
+
+gray {
+  color: gray;
+}
+
+.aftermarquee {
+  text-align: center;
+  text-shadow: 0 0 15px #111;
+  animation: am-anim 2s ease-in-out 10s normal;
+  pointer-events: none;
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+}
+
+@keyframes am-anim {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.aftermarquee h2 {
+  margin: 0;
+}
+
+.aftermarquee p {
+margin-bottom: 15vh;
 }
