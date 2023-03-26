@@ -97,3 +97,15 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
+var heroSection = document.getElementById('hero');
+
+// Only apply opacity changes on larger screens
+if (window.innerWidth >= 768) {
+  // Listen for changes in the scroll position of the page
+  window.addEventListener('scroll', function() {
+    // Calculate the opacity based on the current scroll position
+    var opacity = 1 - window.pageYOffset/500;
+    // Set the opacity of the hero section
+    heroSection.style.opacity = opacity.toString();
+  });
+}
