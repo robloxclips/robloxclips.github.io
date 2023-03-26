@@ -433,7 +433,7 @@ footer a {
   border-radius: 0.5rem;
 }
 .marquee {
-  animation: m-anim 7s ease-in infinite;
+  animation: m-anim 11s ease-in infinite;
   font-size: 9rem;
   white-space: nowrap;
   pointer-events: none;
@@ -449,7 +449,7 @@ footer a {
   0% {transform: translateX(100%); opacity: 0;}
   10% {opacity: 0.3;}
   90% {opacity: 0.5;}
-  100% {transform: translateX(-450vh); opacity: 0;}
+  100% {transform: translateX(-495rem); opacity: 0;}
 }
 
 gray {
