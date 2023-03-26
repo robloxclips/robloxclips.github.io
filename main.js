@@ -97,10 +97,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
     
   });
 });
-var heroSection = document.getElementById('hero');
+var heroSection = document.getElementsByClassName('hero')[0];
 
 // Only apply opacity changes on larger screens
-if (window.innerWidth >= 768) {
+if (window.innerWidth >= 800) {
   // Listen for changes in the scroll position of the page
   window.addEventListener('scroll', function() {
     // Calculate the opacity based on the current scroll position
