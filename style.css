@@ -230,7 +230,7 @@ body {
         flex-direction: column;
         justify-content: center; /* To center the content vertically */
         align-items: center; /* To center the content horizontally */
-        background-color: #c4bbbb; /* Change the background color to a grayish shade */
+        background-color: #c9c5c5; /* Change the background color to a grayish shade */
         border-radius: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
         margin-bottom: 20px; /* Add some margin for spacing */
@@ -448,8 +448,8 @@ footer a {
 @keyframes m-anim {
   0% {transform: translateX(100%); opacity: 0;}
   10% {opacity: 0.3;}
-  90% {opacity: 0.3;}
-  100% {transform: translateX(-350%); opacity: 0;}
+  90% {opacity: 0.5;}
+  100% {transform: translateX(-450vh); opacity: 0;}
 }
 
 gray {
@@ -459,16 +459,10 @@ gray {
 .aftermarquee {
   text-align: center;
   text-shadow: 0 0 15px #111;
-  animation: am-anim 2s ease-in-out 10s normal;
   pointer-events: none;
   z-index: 2;
   color: white;
   font-size: 2rem;
-}
-
-@keyframes am-anim {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 .aftermarquee h2 {
