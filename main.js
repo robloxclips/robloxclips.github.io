@@ -63,14 +63,32 @@ var TxtType = function(el, toRotate, period) {
     document.body.appendChild(css);
   };
   window.addEventListener('load', () => {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+    if (!isMobileDevice()) {
+      // Initialize AOS for non-mobile devices
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    } else {
+      // Disable AOS animations on mobile devices
+      const aosElements = document.querySelectorAll('[data-aos]');
+      aosElements.forEach(element => {
+        element.removeAttribute('data-aos');
+        element.removeAttribute('data-aos-duration');
+      });
+    }
   });
-
+  
+  function isMobileDevice() {
+    // Define your breakpoint here, e.g. 768 pixels
+    const breakpoint = 768;
+    
+    // Compare window.innerWidth with the breakpoint
+    return window.innerWidth < breakpoint;
+  }
+  
   var prevScrollpos = window.pageYOffset;
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
