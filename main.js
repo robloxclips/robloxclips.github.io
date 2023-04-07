@@ -139,26 +139,33 @@ const observer = new IntersectionObserver(entries => {
       // Get the target stat element
       const statElement = entry.target;
       
-      // Get the value to count up to
-      const countTo = parseInt(statElement.querySelector('.stat-title').textContent);
-      
-      // Start counting up from 0 to the countTo value
-      let count = 0;
-      const countUp = setInterval(() => {
-        // Update the stat value with percentage symbol for 'Customer satisfaction' and 'Undetected' stats
-        if (statElement.querySelector('.stat-d').textContent === 'Customer satisfaction' ||
-            statElement.querySelector('.stat-d').textContent === 'Undetected') {
-          statElement.querySelector('.stat-title').textContent = count + '%';
-        }
-        // Update the stat value without percentage symbol for 'Bruhware users' stat
-        else {
-          statElement.querySelector('.stat-title').textContent = count;
-        }
-        count++;
-        if (count > countTo) {
-          clearInterval(countUp);
-        }
-      }, 20); // Adjust the interval time for desired animation speed
+      // Check if the count-up animation has already started for this stat
+      const hasCountedUp = statElement.getAttribute('data-counted-up');
+      if (!hasCountedUp) {
+        // Set the flag to indicate that count-up animation has started
+        statElement.setAttribute('data-counted-up', 'true');
+        
+        // Get the value to count up to
+        const countTo = parseInt(statElement.querySelector('.stat-title').textContent);
+        
+        // Start counting up from 0 to the countTo value
+        let count = 0;
+        const countUp = setInterval(() => {
+          // Update the stat value with percentage symbol for 'Customer satisfaction' and 'Undetected' stats
+          if (statElement.querySelector('.stat-d').textContent === 'Customer satisfaction' ||
+              statElement.querySelector('.stat-d').textContent === 'Undetected') {
+            statElement.querySelector('.stat-title').textContent = count + '%';
+          }
+          // Update the stat value without percentage symbol for 'Bruhware users' stat
+          else {
+            statElement.querySelector('.stat-title').textContent = count;
+          }
+          count++;
+          if (count > countTo) {
+            clearInterval(countUp);
+          }
+        }, 20); // Adjust the interval time for desired animation speed
+      }
     }
   });
 }, options);
