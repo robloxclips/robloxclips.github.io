@@ -503,10 +503,11 @@ background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
 }
 .about-title {
   text-align: center;
-  color: rgb(124, 30, 30);
+ color: white;
   font-size: 3rem;
   margin-bottom: 3rem;
 }
+
 .about-content {
 margin-right: 5rem;
 margin-left: 5rem;
@@ -521,4 +522,22 @@ font-size: 1.3rem;
 .stats-container {
   font-size: .8rem;
 }
+}
+.about-title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  top: calc(100% - 4px); /* Adjust the value to control the distance from the text */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 10%; /* Adjust the width to control the length of the underline */
+  height: 4px;
+  background-color: #961717; /* Change to desired color */
+  border: none; /* Remove default border */
 }
