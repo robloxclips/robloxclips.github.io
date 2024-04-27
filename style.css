@@ -8,6 +8,7 @@
 body, .hero{
   overflow-x: hidden;
 }
+
 :root {
     --background-color: #0a0e13;
     --blue-color: #429bfb;
@@ -434,7 +435,7 @@ footer a {
   border-radius: 0.5rem;
 }
 .marquee {
-  animation: m-anim 11s ease-in infinite;
+  animation: m-anim 16s ease-in infinite;
   font-size: 9rem;
   white-space: nowrap;
   pointer-events: none;
