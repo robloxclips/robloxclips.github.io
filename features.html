@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bruhware v2 | Complete Features List</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Bruhware v2 is a universal Roblox aimbot and ESP focused on smooth, human-like aim, clean visuals, and full configurability."
+    />
+    <meta
+      name="keywords"
+      content="bruhware, roblox aimbot, roblox esp, universal aimbot, legit aimbot"
+    />
+
+    <meta property="og:url" content="https://bruhware.cc/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bruhware v2" />
+    <meta property="og:title" content="Bruhware v2 | Roblox Aimbot & ESP" />
+    <meta
+      property="og:description"
+      content="A universal Roblox aimbot and ESP built around smooth aim, clean visuals, and realistic gameplay."
+    />
+    <meta property="og:image" content="/OIG3.jpeg" />
+
+    <style>
+      .features-hero {
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 5%;
+        background: linear-gradient(160deg, #361313, var(--background-color));
+      }
+
+      .features-hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #fff 0%, #b3b3b3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .features-hero .version {
+        font-size: 1.5rem;
+        color: var(--accent-red);
+        font-weight: 600;
+      }
+
+      .features-grid {
+        padding: 4rem 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .feature-category {
+        background: linear-gradient(145deg, #1a1a1a, #161616);
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .feature-category:hover {
+        border-color: rgba(167, 29, 49, 0.3);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .category-header {
+        background: linear-gradient(
+          145deg,
+          rgba(167, 29, 49, 0.1),
+          rgba(139, 22, 18, 0.1)
+        );
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .category-icon {
+        font-size: 2.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--accent-dark-red) 0%,
+          var(--accent-red) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .category-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .feature-list {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1rem;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 0.8rem;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .feature-item:hover {
+        background: rgba(167, 29, 49, 0.05);
+        transform: translateX(5px);
+      }
+
+      .feature-check {
+        color: #4caf50;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      .feature-text {
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
+      .feature-text strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .feature-subcategory {
+        grid-column: 1 / -1;
+        color: var(--accent-red);
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        border-left: 3px solid var(--accent-red);
+      }
+
+      .feature-subcategory:first-child {
+        margin-top: 0;
+      }
+
+      .game-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .game-item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 0.8rem;
+        border-radius: 8px;
+        text-align: center;
+        color: var(--text-secondary);
+        transition: all 0.2s ease;
+      }
+
+      .game-item:hover {
+        background: rgba(167, 29, 49, 0.1);
+        color: var(--text-primary);
+      }
+
+      .executor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+      }
+
+      .executor-item {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 0.8rem;
+        border-radius: 8px;
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+      }
+
+      .executor-item:hover {
+        background: rgba(167, 29, 49, 0.1);
+        color: var(--text-primary);
+      }
+
+      .back-to-home {
+        text-align: center;
+        padding: 2rem 5% 4rem;
+      }
+
+      .back-to-home .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--accent-dark-red) 0%,
+          var(--accent-red) 100%
+        );
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .back-to-home .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(167, 29, 49, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .features-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .features-hero .version {
+          font-size: 1.2rem;
+        }
+
+        .category-header {
+          padding: 1.5rem;
+        }
+
+        .category-icon {
+          font-size: 2rem;
+        }
+
+        .category-title {
+          font-size: 1.5rem;
+        }
+
+        .feature-list {
+          grid-template-columns: 1fr;
+          padding: 1.5rem;
+        }
+
+        .feature-item {
+          padding: 0.7rem;
+        }
+
+        .game-grid,
+        .executor-grid {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        .features-hero h1 {
+          font-size: 2rem;
+        }
+
+        .features-hero {
+          padding: 3rem 5%;
+          min-height: 40vh;
+        }
+
+        .category-header {
+          flex-direction: column;
+          text-align: center;
+          gap: 0.5rem;
+        }
+
+        .game-grid,
+        .executor-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a class="link" href="/"><h4>bruhware</h4></a>
+      </div>
+      <nav class="navbar-body">
+        <div class="navbar-links">
+          <a class="link" href="/">HOME</a>
+          <a class="link" href="legit.html">LEGIT CLIPS</a>
+          <a class="link" href="blatant.html">BLATANT CLIPS</a>
+          <a class="link" href="https://store.bruhware.cc">Purchase</a>
+          <a class="link" href="faq.html">FAQ</a>
+          <a class="link" href="features.html" style="color: var(--accent-red)"
+            >FEATURES</a
+          >
+        </div>
+      </nav>
+      <span class="navbar-burger">
+        <i id="menu" class="bx bx-menu"></i>
+      </span>
+    </header>
+
+    <section class="features-hero" data-aos="fade-in">
+      <div class="herocenter-content">
+        <h1 data-aos="zoom-in">bruhware™ Universal V2</h1>
+        <p class="version" data-aos="fade-up" data-aos-delay="200">
+          Complete Features List
+        </p>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+          The most comprehensive Roblox cheating solution with over 100+
+          features
+        </p>
+      </div>
+    </section>
+
+    <div class="features-grid">
+      <!-- AIMBOT SYSTEM -->
+      <div class="feature-category" data-aos="fade-up">
+        <div class="category-header">
+          <i class="bx bx-cross category-icon"></i>
+          <h2 class="category-title">AIMBOT SYSTEM</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Core Features</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Advanced Aimbot</strong> - Precise player targeting
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Multiple Aim Methods</strong> - Mouse movement or camera
+              control
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Toggle/Hold Modes</strong> - Click-to-lock or hold-to-aim
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Customizable Hotkey</strong> - Bind to any key
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Targeting Options</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Smart Part Selection</strong> - Choose specific body parts
+              or closest-to-cursor
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Auto-Switch Parts</strong> - Automatically alternates
+              between head and body
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Prediction System</strong> - Accounts for target movement
+              velocity
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Distance Limiting</strong> - Set maximum targeting range
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Filtering System</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Team Check</strong> - Avoid teammates
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Wall Check</strong> - Only target visible players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Health Check</strong> - Skip dead/injured players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Force Field Detection</strong> - Ignore shielded players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>God Mode Detection</strong> - Skip invincible players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Invisibility Detection</strong> - Doesn't lock onto
+              invisible players
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Smoothing & Pathing</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>3 Path Types:</strong> Linear (straight-line), Quadratic
+              (curved), Cubic (human-like)
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Advanced Smoothing System</strong> Horizontal/Vertical
+              smoothing
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Custom Offsets</strong> - Fine-tune X/Y aim position
+              (Bypass cursor offsets)
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Visual Indicators</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>FOV Circle</strong> - Shows targeting area
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Customizable FOV</strong> - Adjust size, color,
+              transparency
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Rainbow FOV</strong> - Color cycling effect
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Filled/Outline Modes</strong> - Multiple visual styles
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Advanced Features</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Sticky Aim</strong> - Locks onto first target
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Sticky Wall Check</strong> - Breaks lock when target hides
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Invisibility Notifications</strong> - Alerts when players
+              turn invisible
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Panic Key</strong> - Instantly hides all visuals
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESP/VISUALS SYSTEM -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="100">
+        <div class="category-header">
+          <i class="bx bx-low-vision category-icon"></i>
+          <h2 class="category-title">ESP/VISUALS SYSTEM</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Player ESP</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Box ESP</strong> - 2D boxes or corner indicators
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Filled Boxes</strong> - Solid or transparent fill
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Name Tags</strong> - Display player names
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Distance Display</strong> - Show exact distance
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Weapon ESP</strong> - Shows equipped weapon
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Team Colors</strong> - Color-coded by team
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Health System</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Health Bars</strong> - Dynamic color-changing bars
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Health Text</strong> - Percentage display
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Health-Based Coloring</strong> - Red to green gradient
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Outlined Health Bars</strong> - Clear visibility
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Visual Effects</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Tracers</strong> - Lines from screen edges to players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>4 Tracer Origins:</strong> Bottom, Top, Middle, or Mouse
+              position
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Customizable Thickness</strong> - Adjust line thickness
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Wall Check Colors</strong> - Different colors for
+              visible/hidden
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Skeleton ESP</strong> - Shows player bone structure
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Chams</strong> - Colors player models through walls
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Customization</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Rainbow ESP</strong> - Cycle through colors
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Scaling Factor</strong> - Adjust ESP size/scaling
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Transparency Controls</strong> - Edit opacity
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Full Color Customization</strong> - Every element
+              colorable
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRIGGERBOT SYSTEM -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="200">
+        <div class="category-header">
+          <i class="bx bx-target-lock category-icon"></i>
+          <h2 class="category-title">TRIGGERBOT SYSTEM</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Automatic Shooting</strong> - Fires when aiming at target
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Hold Mode</strong> - Continuous firing while aimed
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Part-Specific Targeting</strong> - Head, body, or any part
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Distance Limiting</strong> - Maximum activation range
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Hit Chance</strong> - Percentage-based activation
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Gun Requirement</strong> - Only activate with weapon
+              equipped
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Force Field Ignore</strong> - Skip shielded targets
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NPC/BOT TRACKING -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="300">
+        <div class="category-header">
+          <i class="bx bx-joystick category-icon"></i>
+          <h2 class="category-title">NPC/BOT TRACKING</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Auto NPC Detection</strong> - Works with popular games
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Custom Folder Support</strong> - Add custom NPC locations
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Name-Based Tracking</strong> - Find NPCs by model name
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Manual Refresh</strong> - Force NPC scan
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Game-Specific Configs</div>
+          <div class="game-grid">
+            <div class="game-item">Aim H4X</div>
+            <div class="game-item">Zombie Aim Challenge</div>
+            <div class="game-item">Bot Aim Training</div>
+            <div class="game-item">PL Bots</div>
+            <div class="game-item">And many more...</div>
+          </div>
+          <p
+            style="
+              text-align: center;
+              color: var(--text-secondary);
+              margin-top: 1rem;
+              font-size: 0.9rem;
+            "
+          >
+            <i class="bx bx-info-circle" style="margin-right: 5px"></i>
+            <strong>Custom Support:</strong> Easily add support for any game
+            using our custom folder system!
+          </p>
+        </div>
+      </div>
+
+      <!-- WHITELIST SYSTEM -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="400">
+        <div class="category-header">
+          <i class="bx bx-user-check category-icon"></i>
+          <h2 class="category-title">WHITELIST SYSTEM</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Per-Feature Whitelists</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Aimbot Whitelist</strong> - Specific players/teams only
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>ESP Whitelist</strong> - Show ESP for select players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Triggerbot Whitelist</strong> - Shoot only whitelisted
+              targets
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Management Tools</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Player Selection</strong> - Add/remove individual players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Team Selection</strong> - Whitelist entire teams
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>"Whitelist All"</strong> - Quick add all players
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Clear All</strong> - Reset whitelists
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Live Updates</strong> - Changes apply immediately
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI/UX FEATURES -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="500">
+        <div class="category-header">
+          <i class="bx bx-desktop category-icon"></i>
+          <h2 class="category-title">UI/UX FEATURES</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Interface</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Clean Tab Layout</strong> - Organized by function
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Tooltip System</strong> - Hover explanations
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Theme Support</strong> - Custom color schemes
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Save/Load Configs</strong> - Preset management
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Resizable Window</strong> - Adjustable interface
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Menu Keybind</strong> - Show/hide hotkey
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Settings Management</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Theme Manager</strong> - UI color customization
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Save Manager</strong> - Config auto-saving
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Preset System</strong> - Multiple config slots
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Import/Export</strong> - Share configurations
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TECHNICAL SPECIFICATIONS -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="600">
+        <div class="category-header">
+          <i class="bx bx-chip category-icon"></i>
+          <h2 class="category-title">TECHNICAL SPECIFICATIONS</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Game Support</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Universal Design</strong> - Works with most games
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>R6/R15 Support</strong> - All avatar types
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Team Detection</strong> - Auto-detects team systems
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Humanoid Detection</strong> - Works with NPCs/bots
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Part Recognition</strong> - Identifies all body parts
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Supported Executors</div>
+          <div class="executor-grid">
+            <div class="executor-item">Velocity</div>
+            <div class="executor-item">Volt</div>
+            <div class="executor-item">Potassium</div>
+            <div class="executor-item">Bunni</div>
+            <div class="executor-item">Solara</div>
+            <div class="executor-item">Xeno</div>
+            <div class="executor-item">And more...</div>
+          </div>
+
+          <div class="feature-subcategory">Performance</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Low CPU Usage</strong> - Optimized loops
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Stable FPS</strong> - No noticeable drops
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Fast Loading</strong> - Quick initialization
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EASE OF USE -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="700">
+        <div class="category-header">
+          <i class="bx bx-rocket category-icon"></i>
+          <h2 class="category-title">EASE OF USE</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>One-Click Setup</strong> - Just inject and play
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Beginner Friendly</strong> - Tooltips guide new users
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Advanced Options</strong> - Deep customization available
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MISCELLANEOUS FEATURES -->
+      <div class="feature-category" data-aos="fade-up" data-aos-delay="800">
+        <div class="category-header">
+          <i class="bx bx-cog category-icon"></i>
+          <h2 class="category-title">MISCELLANEOUS FEATURES</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-subcategory">Notifications</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Invisibility Alerts</strong> - Player invisible
+              notifications
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>NPC Tracking Updates</strong> - Scan completion alerts
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>UI Notifications</strong> - Action confirmations
+            </div>
+          </div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Sound Effects</strong> - Sound notifications
+            </div>
+          </div>
+
+          <div class="feature-subcategory">Performance</div>
+          <div class="feature-item">
+            <i class="bx bx-check feature-check"></i>
+            <div class="feature-text">
+              <strong>Optimized ESP</strong> - Efficient rendering system
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-to-home">
+      <a href="/" class="btn"> <i class="bx bx-home"></i> Back to Home </a>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-center">
+          <p>&copy; <span id="currentYear">2024</span> Bruhware™</p>
+          <a href="https://discord.com/invite/bZfSq9eNpE">Discord Server</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
