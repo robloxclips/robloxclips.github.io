@@ -1,1 +1,1 @@
-https://dsc.gg/bruhware
+## https://bruhware.cc/discord
