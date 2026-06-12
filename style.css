@@ -25,7 +25,6 @@
   --gradient-gold: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
 }
 
-/* ========== GLOBAL STYLES ========== */
 body {
   background-color: var(--background-color);
   color: var(--text-primary);
@@ -38,7 +37,6 @@ html {
   scroll-padding-top: 80px;
 }
 
-/* ========== NAVBAR FIXED ========== */
 .navbar {
   position: fixed !important;
   top: 0 !important;
@@ -114,8 +112,6 @@ html {
 .navbar a:hover::after {
   width: 80%;
 }
-
-/* Buy button styling */
 .navbar-links a[href*="dc.gg"],
 .navbar-links a[href*="discord"] {
   background: var(--gradient-red);
@@ -136,7 +132,6 @@ html {
   box-shadow: 0 10px 20px rgba(167, 29, 49, 0.3);
 }
 
-/* Burger menu */
 .navbar-burger {
   display: none;
   font-size: 1.8rem;
@@ -150,7 +145,6 @@ html {
   color: var(--accent-red);
 }
 
-/* ========== HERO SECTION ========== */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -218,7 +212,6 @@ html {
   z-index: 1;
 }
 
-/* Legit/Blatant page hero */
 .hero-center {
   min-height: 70vh;
   display: flex;
@@ -265,7 +258,6 @@ html {
   box-shadow: 0 15px 30px rgba(167, 29, 49, 0.4);
 }
 
-/* ========== MARQUEE SECTION ========== */
 .marquee-section {
   padding: 4rem 5%;
   background: #1a1f26;
@@ -284,7 +276,6 @@ html {
   padding-right: 100px;
 }
 
-/* Duplicate the content for seamless looping */
 .marquee::after {
   content: "Advanced Aimbot · Human-Like Aim Paths · Smart Prediction · Clean ESP · Wall & Team Checks · Invisibility Detection · Universal · ";
   display: inline-block;
@@ -325,7 +316,6 @@ html {
   font-size: 1.1rem;
 }
 
-/* ========== ABOUT SECTION ========== */
 .about-container {
   padding: 6rem 5%;
   max-width: 1200px;
@@ -368,7 +358,6 @@ html {
   text-align: left;
 }
 
-/* ========== IMPROVED STATS SECTION ========== */
 .stats {
   padding: 6rem 5%;
   text-align: center;
@@ -505,8 +494,6 @@ html {
 .stat:nth-child(2) .stat-title::after {
   color: var(--accent-gold);
 }
-
-/* ========== IMPROVED FEATURES SECTION ========== */
 .features-container {
   padding: 8rem 5%;
   background: linear-gradient(135deg, #4a141b 0%, #a71d31 100%);
@@ -570,7 +557,6 @@ html {
   z-index: 1;
 }
 
-/* ========== FEATURES FOOTER ========== */
 .features-footer {
   text-align: center;
   margin-top: 4rem;
@@ -784,7 +770,6 @@ html {
   z-index: 1;
 }
 
-/* ========== PRICING SECTION ========== */
 .pricing-container {
   padding: 8rem 5%;
   background: var(--background-color);
@@ -894,7 +879,6 @@ html {
   text-decoration: underline;
 }
 
-/* ========== IMPROVED PRICING CARDS ========== */
 .pricing {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -1153,7 +1137,6 @@ html {
   left: 100%;
 }
 
-/* ========== CLIPS PAGES ========== */
 .legit-clips-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1178,7 +1161,6 @@ html {
   border-color: rgba(167, 29, 49, 0.4);
 }
 
-/* ========== BLATANT CLIPS CONTAINER ========== */
 .blatant-clips-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1202,8 +1184,6 @@ html {
   box-shadow: 0 20px 45px rgba(167, 29, 49, 0.4);
   border-color: rgba(167, 29, 49, 0.4);
 }
-
-/* ========== FAQ ACCORDION STYLES ========== */
 .accordion {
   width: 90%;
   max-width: 1200px;
@@ -1285,7 +1265,6 @@ html {
   text-decoration: underline;
 }
 
-/* ========== FOOTER ========== */
 footer {
   background: #1a1a1a;
   padding: 3rem 5%;
@@ -1313,7 +1292,6 @@ footer {
   color: #fff;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 1200px) {
   .hero-title {
     font-size: 3.8rem;
@@ -1362,7 +1340,6 @@ footer {
 }
 
 @media (max-width: 900px) {
-  /* Navbar mobile */
   .navbar-burger {
     display: block;
   }
@@ -1438,7 +1415,6 @@ footer {
     font-size: 1rem;
   }
 
-  /* Stats responsive */
   .stats-container {
     grid-template-columns: 1fr;
     max-width: 500px;
@@ -1477,14 +1453,12 @@ footer {
     font-size: 2.8rem;
   }
 
-  /* Features & Pricing */
   .features,
   .pricing {
     grid-template-columns: 1fr;
     max-width: 500px;
   }
 
-  /* Info container */
   .info-container {
     padding: 2rem;
     margin: 0 1rem 3rem;
@@ -1740,7 +1714,6 @@ footer {
   }
 }
 
-/* For AOS animations */
 [data-aos] {
   pointer-events: auto;
 }
